@@ -66,7 +66,7 @@ function setup() {
 function draw() {
   //trex.debug = true;
   background(255);
-   gameOver = createSprite(trex.position.x + 500,windowHeight/6);
+   gameOver = createSprite(trex.position.x,windowHeight/6);
   gameOver.addImage(gameOverImg);
   
   restart = createSprite(gameOver.x,gameOver.y + 70);
