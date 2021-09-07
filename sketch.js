@@ -46,12 +46,7 @@ function setup() {
   ground.addImage("ground",groundImage);
   ground.x = trex.x;
   ground.velocityX = -(6 + 3*score/100);
-  
-  gameOver = createSprite(trex.position.x + 500,windowHeight/6);
-  gameOver.addImage(gameOverImg);
-  
-  restart = createSprite(gameOver.x,gameOver.y + 70);
-  restart.addImage(restartImg);
+ 
   
   gameOver.scale = 0.5;
   restart.scale = 0.5;
@@ -71,6 +66,11 @@ function setup() {
 function draw() {
   //trex.debug = true;
   background(255);
+   gameOver = createSprite(trex.position.x + 500,windowHeight/6);
+  gameOver.addImage(gameOverImg);
+  
+  restart = createSprite(gameOver.x,gameOver.y + 70);
+  restart.addImage(restartImg);
   text("Score: "+ score, trex.position.x + 100,50);
   camera.position.x = trex.x + 200;
   if (gameState===PLAY){
